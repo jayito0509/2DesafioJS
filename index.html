@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>Primer Ejercicio</h1>
+    <img id="imagen" src="./assets/img/ardilla.jpg" alt="">
+    <script>
+        imagen = document.querySelector('#imagen');
+        imagen.addEventListener('click', ()=>
+    {
+        if (imagen.style.border == '') {
+           imagen.style.border = 'solid 3px red'           
+        } else {
+            imagen.style.border = ''
+        }
+    })
+    </script>     
+    <hr>
+    <!-- Cierre  -->
+     <h1>Segundo Ejercicio</h1>
+    <div class="segundoE">
+        <div> <img id="imagen2" src="./assets/img/ardilla.jpg" alt=""> <br>
+        <input id="text1" type="text"></div>
+        <div> <img id="imagen2" src="./assets/img/ardilla.jpg" alt=""> <br>
+        <input id="text2" type="text"></div>
+        <div> <img id="imagen2" src="./assets/img/ardilla.jpg" alt=""> <br>
+        <input id="text3" type="text"></div>
+    </div>
+ 
+     <div class="btns">
+        <p id="ejercicio2"> ... </p>
+        <button class="btn" onclick="
+        num1 = Number(document.querySelector('#text1').value); 
+        num2 = Number(document.querySelector('#text2').value); 
+        num3 = Number(document.querySelector('#text3').value); 
+        
+        sum = num1 + num2 + num3
+        if (sum <= 10) {
+            mensaje = document.querySelector('#ejercicio2')
+            mensaje.innerHTML = 'Llevas ' + sum + ' stickers'
+        } else {
+            mensaje = document.querySelector('#ejercicio2')
+            mensaje.innerHTML = 'Llevas demasiados stickers'
+        }
+        "> Verificar </button>
+    </div>
+    <hr>
+     <!-- Cierre  -->
+     <h1>Tercer Ejercicio</h1>
+
+     <div id="numeros">
+        <select name="" id="primerD">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <select name="" id="segundoD">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <select name="" id="tercerD">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+     </div>
+<br>
+     <div id="botones">
+        <button onclick="
+        numero1 = document.querySelector('#primerD').value
+        numero2 = document.querySelector('#segundoD').value
+        numero3 = document.querySelector('#tercerD').value
+        contra = numero1 + numero2 + numero3
+        mensaje3 = document.querySelector('#mensaje3');
+        if (contra == '911') {             
+             mensaje3.innerHTML = 'password 1 correcto'
+         } 
+        else if(contra == '714'){             
+             mensaje3.innerHTML = 'password 2 correcto'    
+         } else {             
+             mensaje3.innerHTML = 'password incorrecto'    
+         }               
+        ">Ingresar</button> 
+        <p id="mensaje3">...</p>
+     </div>
+
+</body>
+
+</html>
+
